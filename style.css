@@ -3,8 +3,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.bottom-line {
+    border-bottom: 2px solid rgb(143, 243, 208);
+}
+
 h1 {
     font-style: italic;
+
+}
+
+header img {
+    border: 2px solid rgb(143, 243, 208);
+    padding: 10px;
 }
 
 .position {
