@@ -4,7 +4,7 @@ body {
 }
 
 .bottom-line {
-    border-bottom: 2px solid rgb(143, 243, 208);
+    border-bottom: 2px solid rgb(245, 211, 41);
 }
 
 h1 {
@@ -13,7 +13,7 @@ h1 {
 }
 
 header img {
-    border: 2px solid rgb(143, 243, 208);
+    border: 2px solid rgb(245, 211, 41);
     padding: 10px;
 }
 
@@ -23,6 +23,11 @@ header img {
 
 th {
     text-transform: uppercase;
+    background-color: rgb(245, 211, 41);
+}
+
+td {
+    background-color: rgb(245, 236, 189);
 }
 
 a {
