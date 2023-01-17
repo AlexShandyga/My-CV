@@ -1,62 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
 body {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-.bottom-line {
-    border-bottom: 2px solid rgb(245, 211, 41);
+.title-border {
+    border-bottom: 5px solid #333;
 }
 
-h1 {
-    font-style: italic;
+.wrapper {
+    display: flex;
+}
+
+.left__column {
+    flex: 1 1 25%;
+    background: #f3e188;
+}
+
+.header h1 {
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+.header span {
+    color: #8b7402;
 
 }
 
-header img {
-    border: 2px solid rgb(245, 211, 41);
-    padding: 10px;
+.left__column h3 {
+    margin-bottom: 20px;
 }
 
-.position {
-    font-weight: 700;
+.left__column img {
+    max-width: 100%;
 }
 
-th {
-    text-transform: uppercase;
-    background-color: rgb(245, 211, 41);
+.padding-40 {
+    padding: 40px 40px 0px 40px;
 }
 
-td {
-    background-color: rgb(245, 236, 189);
+.left-column__title {
+    margin-bottom: 40px;
+    line-height: 2.5;
+    font-size: 32px;
 }
 
-a {
-    color: #00f;
-    text-decoration: underline;
+.contacts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-a:visited {
-    color: #005;
-    text-decoration: underline;
+.contacts ul li h3 {
+    font-size: 25px;
 }
 
-a:hover {
-    text-decoration: none;
+.languages ul {
+    font-size: 25px;
+    font-weight: 600;
 }
 
-ul.skills-list {
-    list-style-type: square;
+.languages ul li {
+    margin-bottom: 25px;
 }
 
-.hero-section {
+.right__column {
+    flex: 1 1 75%;
+    padding: 50px;
+}
+
+.skills__body {
     display: flex;
     justify-content: space-between;
+    gap: 25px;
+    padding-left: 18px;
+    font-size: 18px;
+    font-weight: 600;
+
 }
 
-.hero-section-picture img {
-    max-width: 100px;
-    max-height: 100px;
+.skills__body ul li {
+    list-style-type: initial;
 }
-table {
-    width: 100%;
+
+.skills__left-list {
+    list-style-type: circle;
+}
+
+.mrgn-btm-40 {
+    margin-bottom: 40px;
+}
+
+.title__box {
+    font-size: 40px;
+    border-bottom: 5px solid;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+}
+
+.experience span,
+.education span {
+    font-weight: 600;
+}
+
+.experience-item:not(:last-child) {
+    margin-bottom: 30px;
 }
