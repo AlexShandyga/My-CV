@@ -24,14 +24,39 @@ body {
     background: #f3e188;
 }
 
+.header {
+    text-align: center;
+}
+
 .header h1 {
     margin-bottom: 40px;
     font-size: 50px;
 }
 
 .header span {
-    color: #8b7402;
+    color: #a28701;
 
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.hire-me__btn {
+    color: white;
+    text-decoration: none;
+    background-color: #a28701;
+    padding: 15px 30px;
+    display: block;
+    border-radius: 10px;
+    transition: all ease 0.3s;
+}
+
+.hire-me__btn:hover {
+    background-color: #e1bc04;
+    color: #333;
 }
 
 .left__column h3 {
