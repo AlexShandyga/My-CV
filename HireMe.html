@@ -5,57 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form-style.css">
     <title>HireMe</title>
 </head>
 
 <body>
-    <h1>Hire me</h1>
-    <section>
-        <h3>Contact information</h3>
-        <table border="1" cellspacing="0" cellpadding="10">
-            <tr>
-                <th>Phone</th>
-                <td>+380974461565</td>
-            </tr>
-            <tr>
-                <th>Address</th>
-                <td>Ivano-Frankivsk</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <form action="index.html" method="get">
-            <fieldset>
-                <legend>Contact form</legend>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><label for="email">E-mail*:</label></td>
-                            <td><input id="email" type="email" name="email" required></td>
-                        </tr>
+    <div class="container">
+        <header class="header">
+            <h1>Hire me</h1>
+        </header>
 
-                        <tr>
-                            <td><label for="description">Description:</label></td>
-                            <td><textarea id="description" name="description" cols="20" rows="5"> </textarea>
-                            </td>
+        <section class="contact-info">
+            <h3>Contact information</h3>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <tr>
+                    <th>Phone</th>
+                    <td>+380974461565</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>Ivano-Frankivsk</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <form action="index.html" method="get">
+                <fieldset>
+                    <legend>Contact form</legend>
+                    <div class="email-block">
+                        <label for="email">E-mail <span>*</span></label>
+                        <input id="email" type="email" name="email" placeholder="Enter your email" required>
+                        <p class="error">Error message</p>
+                    </div>
 
-                        </tr>
-                        <tr>
-                            <td><label for="work-type">Work type</label></td>
-                            <td><select name="work-type" id="work-type" required>
-                                    <option></option>
-                                    <option value="">Full-time</option>
-                                    <option value="">Part-time</option>
-                                    <option value="">Remotely</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <input type="submit" value="Hire me">
-            </fieldset>
-        </form>
-    </section>
+                    <div class="description-block">
+                        <label for="description">Description:</label>
+                        <textarea placeholder="Text" id="description" name="description"> </textarea>
+                    </div>
+
+                    <div class="work-block">
+                        <label for="work-type">Work type<span>*</span></label>
+                        <select name="work-type" id="work-type" required>
+                            <option></option>
+                            <option value="">Full-time</option>
+                            <option value="">Part-time</option>
+                            <option value="">Remotely</option>
+                        </select>
+                        <p class="error">Error message</p>
+                    </div>
+
+
+                    <input type="submit" value="Hire me">
+                </fieldset>
+            </form>
+        </section>
+    </div>
 </body>
 
 </html>
