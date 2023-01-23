@@ -20,8 +20,20 @@ body {
 }
 
 .left__column {
-    flex: 1 1 25%;
+    width: 500px;
     background: #f3e188;
+    position: fixed;
+    top: 0;
+}
+
+.right__column {
+    margin-left: 500px;
+    width: 60%;
+    padding: 50px;
+}
+
+.left__column-fixed {
+    position: fixed;
 }
 
 .header {
@@ -98,10 +110,7 @@ body {
     margin-bottom: 25px;
 }
 
-.right__column {
-    flex: 1 1 75%;
-    padding: 50px;
-}
+
 
 .skills__body {
     display: flex;
