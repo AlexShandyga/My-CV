@@ -11,11 +11,11 @@
      box-sizing: border-box;
  }
 
- .container {
+ /* .container {
      max-width: 1024px;
      margin: 0 auto;
      padding: 50px 0;
- }
+ } */
 
  .header h1 {
      margin-bottom: 25px;
@@ -36,6 +36,14 @@
      width: 60%;
      text-align: left;
 
+ }
+
+ .form-block {
+     width: 600px;
+     height: 600px;
+     position: fixed;
+     top: calc(50% - 300px);
+     left: calc(50% - 300px);
  }
 
  fieldset {
