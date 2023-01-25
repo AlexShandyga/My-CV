@@ -1,0 +1,37 @@
+:root {
+
+    /* margins */
+
+    --margin-xsmall: 20px;
+    --margin-small: 25px;
+    --margin-medium: 40px;
+    --margin-large: 50px;
+
+    /* font */
+    --font-xsmall: 18px;
+    --font-small: 25px;
+    --font-medium: 32px;
+    --font-large: 40px;
+    --font-xlarge: 50px;
+
+    /* border */
+    --border-radius-main: 10px;
+    --border-bottom: 5px;
+}
+
+.main-theme {
+
+    --color-background-primary: #f3e188;
+    --color-background-secondary: #e1bc04;
+    --color-text-primary: #333;
+    --color-text-secondary: #a28701;
+
+}
+
+.my-theme {
+    --color-background-primary: #566f9b;
+    --color-background-secondary: #064e8e;
+    --color-text-primary: rgb(1, 14, 46);
+    --color-text-secondary: #0a0d4e;
+
+}
