@@ -21,17 +21,17 @@
 
 .main-theme {
 
-    --color-background-primary: #f3e188;
-    --color-background-secondary: #e1bc04;
-    --color-text-primary: #333;
-    --color-text-secondary: #a28701;
+    --color-background-primary: #86A3B4;
+    --color-background-secondary: #8fa2ff;
+    --color-text-primary: #1E1E1E;
+    --color-text-secondary: #1C2E8C;
 
 }
 
 .my-theme {
-    --color-background-primary: #566f9b;
-    --color-background-secondary: #064e8e;
+    --color-background-primary: #ebcf02;
+    --color-background-secondary: #fced7c;
     --color-text-primary: rgb(1, 14, 46);
-    --color-text-secondary: #0a0d4e;
+    --color-text-secondary: #554700;
 
 }
