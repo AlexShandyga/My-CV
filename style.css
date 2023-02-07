@@ -25,11 +25,28 @@ body {
     flex: 1 1 25%;
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
     position: relative;
+    animation: expand 1s linear;
+    height: 100%;
 }
 
 .right__column {
     padding: 50px;
     flex: 1 1 75%;
+    animation: expand 1.5s linear;
+    height: 100%;
+}
+
+@keyframes expand {
+    0% {
+        margin-top: 50vh;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+
 }
 
 
@@ -81,7 +98,7 @@ body {
     transform: scale(1.5);
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
     z-index: 50;
-    transition: all ease 0.3s;
+    transition: all ease 0.5s;
 }
 
 
@@ -163,6 +180,11 @@ body {
 .experience-item:not(:last-child) {
     margin-bottom: var(--margin-medium);
 }
+
+.experience-item {
+    transition: all ease 0.5s;
+}
+
 
 .opacity-style {
     opacity: 0.7;
