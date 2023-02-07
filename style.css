@@ -23,6 +23,8 @@ body {
 .left__column {
     background: var(--color-background-primary);
     flex: 1 1 25%;
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
 
 .right__column {
@@ -71,9 +73,17 @@ body {
     margin-bottom: var(--margin-xsmall);
 }
 
-.left__column img {
+.profile_photo img {
     width: 100%;
 }
+
+.profile_photo img:hover {
+    transform: scale(1.5);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    z-index: 50;
+    transition: all ease 0.3s;
+}
+
 
 .padding-40 {
     padding: 40px 40px 0px 40px;
@@ -118,7 +128,7 @@ body {
 
 .skills__body {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 25px;
     padding-left: 18px;
     font-size: var(--font-xsmall);
@@ -154,18 +164,22 @@ body {
     margin-bottom: var(--margin-medium);
 }
 
+.opacity-style {
+    opacity: 0.7;
+}
+
+.opacity-style:hover {
+    opacity: 1;
+}
+
 @media screen and (max-width: 760px) {
     .wrapper {
         flex-direction: column;
     }
 
-    .left__column {
+    /* .left__column {
         width: 100%;
-    }
-
-    .left__column img {
-        min-width: 100%;
-    }
+    } */
 
     .header {
         text-align: left;
@@ -177,5 +191,10 @@ body {
 
     .padding-28 {
         padding: 28px;
+    }
+
+    .profile_photo img:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
