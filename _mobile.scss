@@ -1,0 +1,26 @@
+@media screen and (max-width: 760px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .header {
+        text-align: left;
+    }
+
+    .right__column {
+        padding: 28px;
+    }
+
+    .padding-28 {
+        padding: 28px;
+    }
+
+    .profile_photo {
+        img {
+            &:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    }
+}

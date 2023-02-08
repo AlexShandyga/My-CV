@@ -1,0 +1,244 @@
+:root {
+
+    /* margins */
+
+    --margin-xsmall: 20px;
+    --margin-small: 25px;
+    --margin-medium: 40px;
+    --margin-large: 50px;
+
+    /* font */
+    --font-xsmall: 18px;
+    --font-small: 25px;
+    --font-medium: 32px;
+    --font-large: 40px;
+    --font-xlarge: 50px;
+
+    /* border */
+    --border-radius-main: 10px;
+    --border-bottom: 5px;
+}
+
+@import 'main-theme', 'my-theme';
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    color: var(--color-text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+@mixin column-animation($name: expand, $duration, $timing: linear) {
+    animation: $name $duration $timing;
+
+}
+
+@keyframes expand {
+    0% {
+        margin-top: 50vh;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+
+}
+
+.wrapper {
+    display: flex;
+}
+
+.padding-40 {
+    padding: 40px 40px 0px 40px;
+
+}
+
+.mrgn-btm {
+    margin-bottom: var(--margin-medium);
+}
+
+.title__box {
+    font-size: var(--font-medium);
+    border-bottom: var(--border-bottom) solid var(--color-text-primary);
+    padding-bottom: 40px;
+    margin-bottom: var(--margin-large);
+}
+
+.title-border {
+    border-bottom: var(--border-bottom) solid var(--color-text-primary);
+}
+
+.left-column__title {
+    margin-bottom: var(--margin-medium);
+    line-height: 2.5;
+    font-size: var(--font-medium);
+}
+
+.left__column {
+    background: var(--color-background-primary);
+    flex: 1 1 25%;
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    position: relative;
+    @include column-animation($duration: 1s);
+    min-height: 100%;
+
+
+
+    .header {
+        text-align: center;
+
+        h1 {
+            color: #fff;
+            margin-bottom: var(--margin-medium);
+            font-size: var(--margin-large);
+        }
+
+        span {
+            color: var(--color-text-secondary);
+        }
+    }
+
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 25px;
+
+        .hire-me__btn {
+            color: white;
+            text-decoration: none;
+            background-color: var(--color-text-secondary);
+            padding: 15px 30px;
+            display: block;
+            border-radius: var(--border-radius-main);
+            transition: all ease 0.3s;
+
+            &:hover {
+                background-color: var(--color-background-secondary);
+                color: var(--color-text-primary);
+            }
+        }
+
+
+    }
+
+    h3 {
+        margin-bottom: var(--margin-xsmall);
+    }
+
+    .profile_photo {
+        img {
+            width: 100%;
+
+            &:hover {
+                transform: scale(1.5);
+                box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+                z-index: 50;
+                transition: all ease 0.5s;
+            }
+        }
+    }
+
+    .contacts {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            font-size: var(--font-xsmall);
+            font-weight: 600;
+
+            li {
+                h3 {
+                    font-size: var(--font-small);
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: var(--color-text-secondary);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .languages {
+        ul {
+            font-size: var(--font-small);
+            font-weight: 600;
+
+            li {
+                margin-bottom: var(--margin-small);
+
+            }
+        }
+    }
+
+
+}
+
+.right__column {
+    padding: 50px;
+    flex: 1 1 75%;
+    @include column-animation($duration: 1.5s);
+    height: 100%;
+
+    .skills__body {
+        display: flex;
+        justify-content: space-around;
+        gap: 25px;
+        padding-left: 18px;
+        font-size: var(--font-xsmall);
+        font-weight: 600;
+
+        .skills__left-list {
+            list-style-type: circle;
+        }
+
+        ul {
+            li {
+                list-style-type: initial;
+            }
+
+        }
+    }
+
+    .experience {
+        span {
+            font-weight: 600;
+
+        }
+
+        .experience-item {
+            transition: all ease 0.5s;
+
+            &:not(:last-child) {
+                margin-bottom: var(--margin-medium);
+            }
+        }
+
+        .opacity-style {
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.education span {
+    font-weight: 600;
+}
+
+@import 'mobile';

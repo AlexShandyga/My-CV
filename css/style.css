@@ -1,0 +1,214 @@
+:root {
+  /* margins */
+  --margin-xsmall: 20px;
+  --margin-small: 25px;
+  --margin-medium: 40px;
+  --margin-large: 50px;
+  /* font */
+  --font-xsmall: 18px;
+  --font-small: 25px;
+  --font-medium: 32px;
+  --font-large: 40px;
+  --font-xlarge: 50px;
+  /* border */
+  --border-radius-main: 10px;
+  --border-bottom: 5px;
+}
+
+.main-theme {
+  --color-background-primary: #86A3B4;
+  --color-background-secondary: #8fa2ff;
+  --color-text-primary: #1E1E1E;
+  --color-text-secondary: #1C2E8C;
+}
+
+.my-theme {
+  --color-background-primary: #ebcf02;
+  --color-background-secondary: #fced7c;
+  --color-text-primary: rgb(1, 14, 46);
+  --color-text-secondary: #554700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  color: var(--color-text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+@keyframes expand {
+  0% {
+    margin-top: 50vh;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.wrapper {
+  display: flex;
+}
+
+.padding-40 {
+  padding: 40px 40px 0px 40px;
+}
+
+.mrgn-btm {
+  margin-bottom: var(--margin-medium);
+}
+
+.title__box {
+  font-size: var(--font-medium);
+  border-bottom: var(--border-bottom) solid var(--color-text-primary);
+  padding-bottom: 40px;
+  margin-bottom: var(--margin-large);
+}
+
+.title-border {
+  border-bottom: var(--border-bottom) solid var(--color-text-primary);
+}
+
+.left-column__title {
+  margin-bottom: var(--margin-medium);
+  line-height: 2.5;
+  font-size: var(--font-medium);
+}
+
+.left__column {
+  background: var(--color-background-primary);
+  flex: 1 1 25%;
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+  position: relative;
+  animation: expand 1s linear;
+  min-height: 100%;
+}
+.left__column .header {
+  text-align: center;
+}
+.left__column .header h1 {
+  color: #fff;
+  margin-bottom: var(--margin-medium);
+  font-size: var(--margin-large);
+}
+.left__column .header span {
+  color: var(--color-text-secondary);
+}
+.left__column .btn-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.left__column .btn-wrapper .hire-me__btn {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-text-secondary);
+  padding: 15px 30px;
+  display: block;
+  border-radius: var(--border-radius-main);
+  transition: all ease 0.3s;
+}
+.left__column .btn-wrapper .hire-me__btn:hover {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+}
+.left__column h3 {
+  margin-bottom: var(--margin-xsmall);
+}
+.left__column .profile_photo img {
+  width: 100%;
+}
+.left__column .profile_photo img:hover {
+  transform: scale(1.5);
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+  z-index: 50;
+  transition: all ease 0.5s;
+}
+.left__column .contacts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  font-size: var(--font-xsmall);
+  font-weight: 600;
+}
+.left__column .contacts ul li h3 {
+  font-size: var(--font-small);
+}
+.left__column .contacts ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+.left__column .contacts ul li a:hover {
+  color: var(--color-text-secondary);
+}
+.left__column .languages ul {
+  font-size: var(--font-small);
+  font-weight: 600;
+}
+.left__column .languages ul li {
+  margin-bottom: var(--margin-small);
+}
+
+.right__column {
+  padding: 50px;
+  flex: 1 1 75%;
+  animation: expand 1.5s linear;
+  height: 100%;
+}
+.right__column .skills__body {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  padding-left: 18px;
+  font-size: var(--font-xsmall);
+  font-weight: 600;
+}
+.right__column .skills__body .skills__left-list {
+  list-style-type: circle;
+}
+.right__column .skills__body ul li {
+  list-style-type: initial;
+}
+.right__column .experience span {
+  font-weight: 600;
+}
+.right__column .experience .experience-item {
+  transition: all ease 0.5s;
+}
+.right__column .experience .experience-item:not(:last-child) {
+  margin-bottom: var(--margin-medium);
+}
+.right__column .experience .opacity-style {
+  opacity: 0.7;
+}
+.right__column .experience .opacity-style:hover {
+  opacity: 1;
+}
+
+.education span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .header {
+    text-align: left;
+  }
+  .right__column {
+    padding: 28px;
+  }
+  .padding-28 {
+    padding: 28px;
+  }
+  .profile_photo img:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
