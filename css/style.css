@@ -55,6 +55,19 @@ body {
   display: flex;
 }
 
+.photo-resize {
+  transform: scale(1.5);
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+  z-index: 50;
+  transition: all ease-in-out 0.5s;
+}
+
+.l {
+  border-radius: 3px;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
 .padding-40 {
   padding: 40px 40px 0px 40px;
 }
@@ -122,12 +135,6 @@ body {
 }
 .left__column .profile_photo img {
   width: 100%;
-}
-.left__column .profile_photo img:hover {
-  transform: scale(1.5);
-  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
-  z-index: 50;
-  transition: all ease 0.5s;
 }
 .left__column .contacts ul {
   display: flex;
