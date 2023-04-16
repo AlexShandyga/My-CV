@@ -251,4 +251,14 @@ body {
     font-weight: 600;
 }
 
+.repo {
+    margin-bottom: 20px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 600;
+    }
+}
+
 @import 'mobile';
